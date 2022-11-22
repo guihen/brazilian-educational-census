@@ -1,5 +1,6 @@
 require "test_helper"
 require Rails.root.join("lib", "census_data", "school_dto")
+require 'csv'
 
 class SchoolDtoTest < ActiveSupport::TestCase
   SAMPLE_1 = "2021;Norte;1;Rondônia;RO;11;Alta Floresta D'Oeste;1100015;Leste Rondoniense;1102;Cacoal;11006;110001505;11024275;CEEJA LUIZ VAZ DE CAMOES;2;;1;0;AVENIDA RIO DE JANEIRO;4776;ESCOLA;CIDADE ALTA;76954000;69;36412656;1;00015;22FEB2021:00:00:00;21DEC2021:00:00:00;1;0;0;0;;;;;;;;;;;;1;2;;;1;1;;0;1;1;;;0;;0;0;0;;1;1;0;0;0;0;1;;0;;0;0;0;1;0;1;0;1;0;0;0;0;;;;0;0;0;1;0;0;0;;;1;0;1;1;1;;1;1;1;1;0;0;1;1;1;0;0;0;1;1;0;1;0;0;0;0;1;1;1;0;1;0;0;0;;;0;1;0;0;1;0;0;1;1;0;;10;1;11;10;8;1;1;0;1;1;0;0;1;1;1;5;1;1;0;0;1;4;;;;;;;;;;;;;;1;8;1;4;0;0;;;1;1;1;1;0;1;0;1;1;;1;3;1;6;1;2;0;0;0;0;0;0;0;0;0;0;1;3;1;7;1;1;0;0;1;1;1;1;0;0;1;0;1;0;0;0;0;0;0;0;0;0;1;1;1;0;0;0;0;;;;0;;;;;;;0;;;;;;;1;1;0;0;0;1;0;0;0;1;0;0;1;1;0;0;1;1;1;1;0;0;0;0;0;0;0;0;0;1;1;1;1;1;0;231;0;0;0;0;0;0;0;0;0;231;96;135;5;5;0;128;103;2;62;6;153;0;8;0;0;0;0;15;216;7;204;20;0;0;0;0;0;0;0;14;0;0;0;0;0;0;0;0;0;14;13;10;12;12;0;11;0;0;0;0;0;0;0;0;0;11;7;4;5;5;0".freeze
@@ -46,5 +47,12 @@ class SchoolDtoTest < ActiveSupport::TestCase
     school_dto = SchoolDto.new(SAMPLE_1)
 
     assert_equal school_dto.zipcode, "76954000"
+  end
+
+  test "should receives the line parser as an optional parameter in the initializer" do
+    expected_interface = CSV
+    assert_nothing_raised do
+      SchoolDto.new(SAMPLE_1, CSV)
+    end
   end
 end
