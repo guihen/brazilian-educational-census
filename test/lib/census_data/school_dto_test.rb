@@ -55,4 +55,10 @@ class SchoolDtoTest < ActiveSupport::TestCase
       SchoolDto.new(SAMPLE_1, CSV)
     end
   end
+
+  test "should returns the school code" do
+    school_dto = SchoolDto.new(SAMPLE_1)
+
+    assert_equal school_dto.code, "11024275"
+  end
 end

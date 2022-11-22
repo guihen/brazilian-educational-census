@@ -6,6 +6,10 @@ class SchoolDto
     @parser = line_parser
   end
 
+  def code
+    parsed_data[13]
+  end
+
   def name
     parsed_data[14]
   end
