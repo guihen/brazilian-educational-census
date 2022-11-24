@@ -1,0 +1,81 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  code: MyCode
+  region: MyString
+  state: MyString
+  county: MyString
+  zipcode: MyString
+
+two:
+  name: MyString
+  code: MyCode
+  region: MyString
+  state: MyString
+  county: MyString
+  zipcode: MyString
+
+rondonia:
+  name: EIEEF HAP BITT TUPARI
+  code: 11022558
+  region: Norte
+  state: Rondônia
+  county: Alta Floresta D'Oeste
+  zipcode: 76954000
+
+acre:
+  name: ESC DARCY VARGAS
+  code: 12011509
+  region: Norte
+  state: Acre
+  county: Rio Branco
+  zipcode: 69919600
+
+sao_paulo:
+  name: JORGE BERTOLASO STELLA PROF EMEB
+  code: 35277253
+  region: Sudeste
+  state: São Paulo
+  county: Mogi Mirim
+  zipcode: 13807692
+
+bahia:
+  name: ESC JESUS MARIA JOSE
+  code: 29357071
+  region: Nordeste
+  state: Bahia
+  county: Itapitanga
+  zipcode: 45645000
+
+goias:
+  name: COLEGIO MONTEIRO LOBATO
+  code: 52086526
+  region: Centro-Oeste
+  state: Goiás
+  county: Santa Helena de Goiás
+  zipcode: 75920000
+
+espirito_santo:
+  name: EEEFM BERNARDINO MONTEIRO
+  code: 32052235
+  region: Sudeste
+  state: Espírito Santo
+  county: Cachoeiro de Itapemirim
+  zipcode: 29304615
+
+pernambuco:
+  name: ESCOLA MUNICIPAL JOAO XXIII
+  code: 26013886
+  region: Nordeste
+  state: Pernambuco
+  county: Serrita
+  zipcode: 56140000
+
+parana:
+  name: AFRANIO PEIXOTO E E EF
+  code: 41042476
+  region: Sul
+  state: Paraná
+  county: Abatí
+  zipcode: 86460000
