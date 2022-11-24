@@ -30,6 +30,17 @@ class SchoolDto
     parsed_data[23]
   end
 
+  def racial_diversity
+    {
+      nao_declarado: parsed_data[316].to_i,
+      branca: parsed_data[317].to_i,
+      preta: parsed_data[318].to_i,
+      parda: parsed_data[319].to_i,
+      amarela: parsed_data[320].to_i,
+      indigena: parsed_data[321].to_i
+    }
+  end
+
   private
 
   def parsed_data

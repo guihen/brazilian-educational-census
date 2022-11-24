@@ -61,4 +61,18 @@ class SchoolDtoTest < ActiveSupport::TestCase
 
     assert_equal school_dto.code, "11024275"
   end
+
+  test "should returns the school racial diversity" do
+    school_dto = SchoolDto.new(SAMPLE_1)
+    expected_diversity = {
+        nao_declarado: 2,
+        branca: 62,
+        preta: 6,
+        parda: 153,
+        amarela: 0,
+        indigena: 8
+    }
+
+    assert_equal school_dto.racial_diversity, expected_diversity
+  end
 end
