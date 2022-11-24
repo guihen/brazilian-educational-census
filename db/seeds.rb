@@ -11,7 +11,7 @@ class SeedPrinter
 end
 
 
-file_2021 = File.open(Rails.application.path_to_census_2021, :encoding => 'iso-8859-1')
+file_2021 = File.open(Rails.application.path_to_census_2021, :encoding => 'utf-8')
 
 # ignore the header
 file_2021.readline
@@ -21,15 +21,17 @@ start_time = Time.now
 
 School.transaction do
   file_2021.each do |line|
-    dto = SchoolDto.new(line)
-    record = School.new
-    record.code = dto.code
-    record.name = dto.name
-    record.region = dto.region
-    record.state = dto.state
-    record.county = dto.county
-    record.zipcode = dto.zipcode
-    record.save
+    SchoolDto.new(line).tap do |dto|
+      School.create({
+        code: dto.code,
+        name: dto.name,
+        region: dto.region,
+        state: dto.state,
+        county: dto.county,
+        zipcode: dto.zipcode,
+        racial_diversity: dto.racial_diversity
+      })
+    end
   end
 end
 
