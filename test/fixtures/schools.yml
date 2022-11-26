@@ -7,6 +7,15 @@ one:
   state: MyString
   county: MyString
   zipcode: MyString
+  racial_diversity:
+    {
+      "nao_declarado": 1,
+      "branca": 1,
+      "preta": 1,
+      "parda": 1,
+      "amarela": 1,
+      "indigena": 1
+    }
 
 two:
   name: MyString
@@ -15,6 +24,15 @@ two:
   state: MyString
   county: MyString
   zipcode: MyString
+  racial_diversity:
+    {
+      "nao_declarado": 2,
+      "branca": 2,
+      "preta": 2,
+      "parda": 2,
+      "amarela": 2,
+      "indigena": 2
+    }
 
 rondonia:
   name: EIEEF HAP BITT TUPARI
@@ -23,6 +41,15 @@ rondonia:
   state: Rondônia
   county: Alta Floresta D'Oeste
   zipcode: 76954000
+  racial_diversity:
+    {
+      "nao_declarado": 0,
+      "branca": 0,
+      "preta": 0,
+      "parda": 0,
+      "amarela": 0,
+      "indigena": 8
+    }
 
 acre:
   name: ESC DARCY VARGAS
@@ -31,6 +58,15 @@ acre:
   state: Acre
   county: Rio Branco
   zipcode: 69919600
+  racial_diversity:
+    {
+      "nao_declarado": 26,
+      "branca": 15,
+      "preta": 1,
+      "parda": 24,
+      "amarela": 0,
+      "indigena": 0
+    }
 
 sao_paulo:
   name: JORGE BERTOLASO STELLA PROF EMEB
@@ -39,6 +75,15 @@ sao_paulo:
   state: São Paulo
   county: Mogi Mirim
   zipcode: 13807692
+  racial_diversity:
+    {
+      "nao_declarado": 9,
+      "branca": 212,
+      "preta": 8,
+      "parda": 36,
+      "amarela": 0,
+      "indigena": 0
+    }
 
 bahia:
   name: ESC JESUS MARIA JOSE
@@ -47,6 +92,16 @@ bahia:
   state: Bahia
   county: Itapitanga
   zipcode: 45645000
+  racial_diversity:
+    {
+      "nao_declarado": 0,
+      "branca": 0,
+      "preta": 0,
+      "parda": 0,
+      "amarela": 0,
+      "indigena": 0
+    }
+
 
 goias:
   name: COLEGIO MONTEIRO LOBATO
@@ -55,6 +110,15 @@ goias:
   state: Goiás
   county: Santa Helena de Goiás
   zipcode: 75920000
+  racial_diversity:
+    {
+      "nao_declarado": 51,
+      "branca": 89,
+      "preta": 3,
+      "parda": 37,
+      "amarela": 0,
+      "indigena": 0
+    }
 
 espirito_santo:
   name: EEEFM BERNARDINO MONTEIRO
@@ -63,6 +127,15 @@ espirito_santo:
   state: Espírito Santo
   county: Cachoeiro de Itapemirim
   zipcode: 29304615
+  racial_diversity:
+    {
+      "nao_declarado": 107,
+      "branca": 172,
+      "preta": 45,
+      "parda": 192,
+      "amarela": 0,
+      "indigena": 0
+    }
 
 pernambuco:
   name: ESCOLA MUNICIPAL JOAO XXIII
@@ -71,6 +144,15 @@ pernambuco:
   state: Pernambuco
   county: Serrita
   zipcode: 56140000
+  racial_diversity:
+    {
+      "nao_declarado": 122,
+      "branca": 106,
+      "preta": 7,
+      "parda": 612,
+      "amarela": 1,
+      "indigena": 2
+    }
 
 parana:
   name: AFRANIO PEIXOTO E E EF
@@ -79,3 +161,12 @@ parana:
   state: Paraná
   county: Abatí
   zipcode: 86460000
+  racial_diversity:
+    {
+      "nao_declarado": 11,
+      "branca": 218,
+      "preta": 6,
+      "parda": 64,
+      "amarela": 1,
+      "indigena": 0
+    }
