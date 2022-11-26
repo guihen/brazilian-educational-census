@@ -11,7 +11,7 @@ class SeedPrinter
 end
 
 
-file_2021 = File.open(Rails.application.path_to_census_2021, :encoding => 'utf-8')
+file_2021 = File.open(Rails.application.path_to_census_2021, :encoding => 'iso-8859-1:utf-8')
 
 # ignore the header
 file_2021.readline
