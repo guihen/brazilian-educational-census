@@ -1,0 +1,14 @@
+<p id="total-schools"><%= @total_schools %></p>
+
+<div id="racial-diversity-totals">
+  <p id="total-nao-declarado">Total de Não Declarados: <%= @racial_diversity_totals["nao_declarado"] %></p>
+  <p id="total-branca">Total de Brancas: <%= @racial_diversity_totals["branca"] %></p>
+  <p id="total-parda">Total de Pardas: <%= @racial_diversity_totals["parda"] %></p>
+  <p id="total-preta">Total de Pretas: <%= @racial_diversity_totals["preta"] %></p>
+  <p id="total-amarela">Total de Amarelas: <%= @racial_diversity_totals["amarela"] %></p>
+  <p id="total-indigena">Total de Indígenas: <%= @racial_diversity_totals["indigena"] %></p>
+</div>
+
+<% @total_schools_by_region.each do |region, total| %>
+  <p id="regiao-<%= region.downcase %>"><%= "Região #{region}: #{total}" %></p>
+<% end %>
