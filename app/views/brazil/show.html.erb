@@ -12,3 +12,14 @@
 <% @total_schools_by_region.each do |region, total| %>
   <p id="regiao-<%= region.downcase %>"><%= "Região #{region}: #{total}" %></p>
 <% end %>
+
+<% @racial_diversity_grouped_by_region.each do |region, racial_diversity| %>
+  <div id="racial-diversity-totals-by-region-<%= region.downcase %>">
+    <p id="region-<%= region.downcase %>-total-nao-declarado">Total de Não Declarados (Região <%= region %>): <%= racial_diversity["nao_declarado"] %></p>
+    <p id="region-<%= region.downcase %>-total-branca">Total de Brancas (Região <%= region %>): <%= racial_diversity["branca"] %></p>
+    <p id="region-<%= region.downcase %>-total-parda">Total de Pardas (Região <%= region %>): <%= racial_diversity["parda"] %></p>
+    <p id="region-<%= region.downcase %>-total-preta">Total de Pretas (Região <%= region %>): <%= racial_diversity["preta"] %></p>
+    <p id="region-<%= region.downcase %>-total-amarela">Total de Amarelas (Região <%= region %>): <%= racial_diversity["amarela"] %></p>
+    <p id="region-<%= region.downcase %>-total-indigena">Total de Indígenas (Região <%= region %>): <%= racial_diversity["indigena"] %></p>
+  </div>
+<% end %>

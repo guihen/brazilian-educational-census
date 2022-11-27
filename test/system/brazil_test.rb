@@ -50,4 +50,61 @@ class BrazilTest < ApplicationSystemTestCase
     assert_text "Total de Amarelas: #{racial_diversity_totals["amarela"]}"
     assert_text "Total de Indígenas: #{racial_diversity_totals["indigena"]}"
   end
+
+  test "should have racial diversity grouped by region" do
+    structure_to_be_processed = {
+      "Norte" => Hash.new(0),
+      "Nordeste" => Hash.new(0),
+      "Centro-Oeste" => Hash.new(0),
+      "Sudeste" => Hash.new(0),
+      "Sul" => Hash.new(0)
+    }
+    racial_diversity_grouped = School.pluck(:region, :racial_diversity).reduce(structure_to_be_processed) do |memo, school|
+      if school[1].present?
+        memo[school[0]].tap do |region_accumulator|
+          region_accumulator["nao_declarado"] = region_accumulator["nao_declarado"] + school[1]["nao_declarado"]
+          region_accumulator["branca"] = region_accumulator["branca"] + school[1]["branca"]
+          region_accumulator["parda"] = region_accumulator["parda"] + school[1]["parda"]
+          region_accumulator["preta"] = region_accumulator["preta"] + school[1]["preta"]
+          region_accumulator["amarela"] = region_accumulator["amarela"] + school[1]["amarela"]
+          region_accumulator["indigena"] = region_accumulator["indigena"] + school[1]["indigena"]
+        end
+      end
+
+      memo
+    end
+
+    visit brazil_show_url
+
+    assert_text "Total de Não Declarados (Região Norte): #{racial_diversity_grouped["Norte"]["nao_declarado"]}"
+    assert_text "Total de Brancas (Região Norte): #{racial_diversity_grouped["Norte"]["branca"]}"
+    assert_text "Total de Pardas (Região Norte): #{racial_diversity_grouped["Norte"]["parda"]}"
+    assert_text "Total de Pretas (Região Norte): #{racial_diversity_grouped["Norte"]["preta"]}"
+    assert_text "Total de Amarelas (Região Norte): #{racial_diversity_grouped["Norte"]["amarela"]}"
+    assert_text "Total de Indígenas (Região Norte): #{racial_diversity_grouped["Norte"]["indigena"]}"
+    assert_text "Total de Não Declarados (Região Nordeste): #{racial_diversity_grouped["Nordeste"]["nao_declarado"]}"
+    assert_text "Total de Brancas (Região Nordeste): #{racial_diversity_grouped["Nordeste"]["branca"]}"
+    assert_text "Total de Pardas (Região Nordeste): #{racial_diversity_grouped["Nordeste"]["parda"]}"
+    assert_text "Total de Pretas (Região Nordeste): #{racial_diversity_grouped["Nordeste"]["preta"]}"
+    assert_text "Total de Amarelas (Região Nordeste): #{racial_diversity_grouped["Nordeste"]["amarela"]}"
+    assert_text "Total de Indígenas (Região Nordeste): #{racial_diversity_grouped["Nordeste"]["indigena"]}"
+    assert_text "Total de Não Declarados (Região Centro-Oeste): #{racial_diversity_grouped["Centro-Oeste"]["nao_declarado"]}"
+    assert_text "Total de Brancas (Região Centro-Oeste): #{racial_diversity_grouped["Centro-Oeste"]["branca"]}"
+    assert_text "Total de Pardas (Região Centro-Oeste): #{racial_diversity_grouped["Centro-Oeste"]["parda"]}"
+    assert_text "Total de Pretas (Região Centro-Oeste): #{racial_diversity_grouped["Centro-Oeste"]["preta"]}"
+    assert_text "Total de Amarelas (Região Centro-Oeste): #{racial_diversity_grouped["Centro-Oeste"]["amarela"]}"
+    assert_text "Total de Indígenas (Região Centro-Oeste): #{racial_diversity_grouped["Centro-Oeste"]["indigena"]}"
+    assert_text "Total de Não Declarados (Região Sudeste): #{racial_diversity_grouped["Sudeste"]["nao_declarado"]}"
+    assert_text "Total de Brancas (Região Sudeste): #{racial_diversity_grouped["Sudeste"]["branca"]}"
+    assert_text "Total de Pardas (Região Sudeste): #{racial_diversity_grouped["Sudeste"]["parda"]}"
+    assert_text "Total de Pretas (Região Sudeste): #{racial_diversity_grouped["Sudeste"]["preta"]}"
+    assert_text "Total de Amarelas (Região Sudeste): #{racial_diversity_grouped["Sudeste"]["amarela"]}"
+    assert_text "Total de Indígenas (Região Sudeste): #{racial_diversity_grouped["Sudeste"]["indigena"]}"
+    assert_text "Total de Não Declarados (Região Sul): #{racial_diversity_grouped["Sul"]["nao_declarado"]}"
+    assert_text "Total de Brancas (Região Sul): #{racial_diversity_grouped["Sul"]["branca"]}"
+    assert_text "Total de Pardas (Região Sul): #{racial_diversity_grouped["Sul"]["parda"]}"
+    assert_text "Total de Pretas (Região Sul): #{racial_diversity_grouped["Sul"]["preta"]}"
+    assert_text "Total de Amarelas (Região Sul): #{racial_diversity_grouped["Sul"]["amarela"]}"
+    assert_text "Total de Indígenas (Região Sul): #{racial_diversity_grouped["Sul"]["indigena"]}"
+  end
 end
