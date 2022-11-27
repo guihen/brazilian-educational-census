@@ -3,7 +3,7 @@
 one:
   name: MyString
   code: MyCode
-  region: MyString
+  region: Sudeste
   state: MyString
   county: MyString
   zipcode: MyString
@@ -20,7 +20,7 @@ one:
 two:
   name: MyString
   code: MyCode
-  region: MyString
+  region: Norte
   state: MyString
   county: MyString
   zipcode: MyString
