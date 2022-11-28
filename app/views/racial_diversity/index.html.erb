@@ -8,77 +8,77 @@
 </figure>
 
 
-<table class="table table-striped">
+<table class="table table-striped table-hover">
   <thead>
     <tr>
-      <td></td>
-      <td>Brasil</td>
-      <td>Norte</td>
-      <td>Nordeste</td>
-      <td>Centro-Oeste</td>
-      <td>Suldeste</td>
-      <td>Sul</td>
+      <th></th>
+      <th>Brasil</th>
+      <th>Norte</th>
+      <th>Nordeste</th>
+      <th>Centro-Oeste</th>
+      <th>Sudeste</th>
+      <th>Sul</th>
     </tr>
   </thead>
 
   <tr>
     <td>Pardas</td>
-    <td id="parda-brazil"><%= number_with_delimiter(@racial_diversity["parda"]) %></td>
-    <td id="parda-regiao-norte"><%= number_with_delimiter(@racial_diversity_region_norte["parda"]) %></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td id="parda-brazil"><%= number_with_delimiter(@racial_diversity["Total"]["parda"]) %></td>
+    <td id="parda-regiao-norte"><%= number_with_delimiter(@racial_diversity["Norte"]["parda"]) %></td>
+    <td id="parda-regiao-nordeste"><%= number_with_delimiter(@racial_diversity["Nordeste"]["parda"]) %></td>
+    <td id="parda-regiao-centro-oeste"><%= number_with_delimiter(@racial_diversity["Centro-Oeste"]["parda"]) %></td>
+    <td id="parda-regiao-sudeste"><%= number_with_delimiter(@racial_diversity["Sudeste"]["parda"]) %></td>
+    <td id="parda-regiao-sul"><%= number_with_delimiter(@racial_diversity["Sul"]["parda"]) %></td>
   </tr>
 
   <tr>
     <td>Brancas</td>
-    <td id="branca-brazil"><%= number_with_delimiter(@racial_diversity["branca"]) %></td>
-    <td id="branca-regiao-norte"><%= number_with_delimiter(@racial_diversity_region_norte["branca"]) %></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td id="branca-brazil"><%= number_with_delimiter(@racial_diversity["Total"]["branca"]) %></td>
+    <td id="branca-regiao-norte"><%= number_with_delimiter(@racial_diversity["Norte"]["branca"]) %></td>
+    <td id="branca-regiao-nordeste"><%= number_with_delimiter(@racial_diversity["Nordeste"]["branca"]) %></td>
+    <td id="branca-regiao-centro-oeste"><%= number_with_delimiter(@racial_diversity["Centro-Oeste"]["branca"]) %></td>
+    <td id="branca-regiao-sudeste"><%= number_with_delimiter(@racial_diversity["Sudeste"]["branca"]) %></td>
+    <td id="branca-regiao-sul"><%= number_with_delimiter(@racial_diversity["Sul"]["branca"]) %></td>
   </tr>
 
   <tr>
     <td>Pretas</td>
-    <td id="preta-brazil"><%= number_with_delimiter(@racial_diversity["preta"]) %></td>
-    <td id="preta-regiao-norte"><%= number_with_delimiter(@racial_diversity_region_norte["preta"]) %></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td id="preta-brazil"><%= number_with_delimiter(@racial_diversity["Total"]["preta"]) %></td>
+    <td id="preta-regiao-norte"><%= number_with_delimiter(@racial_diversity["Norte"]["preta"]) %></td>
+    <td id="preta-regiao-nordeste"><%= number_with_delimiter(@racial_diversity["Nordeste"]["preta"]) %></td>
+    <td id="preta-regiao-centro-oeste"><%= number_with_delimiter(@racial_diversity["Centro-Oeste"]["preta"]) %></td>
+    <td id="preta-regiao-sudeste"><%= number_with_delimiter(@racial_diversity["Sudeste"]["preta"]) %></td>
+    <td id="preta-regiao-sul"><%= number_with_delimiter(@racial_diversity["Sul"]["preta"]) %></td>
   </tr>
 
   <tr>
     <td>Indígenas</td>
-    <td id="indigena-brazil"><%= number_with_delimiter(@racial_diversity["indigena"]) %></td>
-    <td id="indigena-regiao-norte"><%= number_with_delimiter(@racial_diversity_region_norte["indigena"]) %></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td id="indigena-brazil"><%= number_with_delimiter(@racial_diversity["Total"]["indigena"]) %></td>
+    <td id="indigena-regiao-norte"><%= number_with_delimiter(@racial_diversity["Norte"]["indigena"]) %></td>
+    <td id="indigena-regiao-nordeste"><%= number_with_delimiter(@racial_diversity["Nordeste"]["indigena"]) %></td>
+    <td id="indigena-regiao-centro-oeste"><%= number_with_delimiter(@racial_diversity["Centro-Oeste"]["indigena"]) %></td>
+    <td id="indigena-regiao-sudeste"><%= number_with_delimiter(@racial_diversity["Sudeste"]["indigena"]) %></td>
+    <td id="indigena-regiao-sul"><%= number_with_delimiter(@racial_diversity["Sul"]["indigena"]) %></td>
   </tr>
 
   <tr>
     <td>Amarelas</td>
-    <td id="amarela-brazil"><%= number_with_delimiter(@racial_diversity["amarela"]) %></td>
-    <td id="amarela-regiao-norte"><%= number_with_delimiter(@racial_diversity_region_norte["amarela"]) %></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td id="amarela-brazil"><%= number_with_delimiter(@racial_diversity["Total"]["amarela"]) %></td>
+    <td id="amarela-regiao-norte"><%= number_with_delimiter(@racial_diversity["Norte"]["amarela"]) %></td>
+    <td id="amarela-regiao-nordeste"><%= number_with_delimiter(@racial_diversity["Nordeste"]["amarela"]) %></td>
+    <td id="amarela-regiao-centro-oeste"><%= number_with_delimiter(@racial_diversity["Centro-Oeste"]["amarela"]) %></td>
+    <td id="amarela-regiao-sudeste"><%= number_with_delimiter(@racial_diversity["Sudeste"]["amarela"]) %></td>
+    <td id="amarela-regiao-sul"><%= number_with_delimiter(@racial_diversity["Sul"]["amarela"]) %></td>
   </tr>
 
   <tr>
     <td>Não declaradas</td>
-    <td id="nao-declarado-brazil"><%= number_with_delimiter(@racial_diversity["nao_declarado"]) %></td>
-    <td id="nao-declarado-regiao-norte"><%= number_with_delimiter(@racial_diversity_region_norte["nao_declarado"]) %></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td id="nao-declarado-brazil"><%= number_with_delimiter(@racial_diversity["Total"]["nao_declarado"]) %></td>
+    <td id="nao-declarado-regiao-norte"><%= number_with_delimiter(@racial_diversity["Norte"]["nao_declarado"]) %></td>
+    <td id="nao-declarado-regiao-nordeste"><%= number_with_delimiter(@racial_diversity["Nordeste"]["nao_declarado"]) %></td>
+    <td id="nao-declarado-regiao-centro-oeste"><%= number_with_delimiter(@racial_diversity["Centro-Oeste"]["nao_declarado"]) %></td>
+    <td id="nao-declarado-regiao-sudeste"><%= number_with_delimiter(@racial_diversity["Sudeste"]["nao_declarado"]) %></td>
+    <td id="nao-declarado-regiao-sul"><%= number_with_delimiter(@racial_diversity["Sul"]["nao_declarado"]) %></td>
   </tr>
 
 </table>
