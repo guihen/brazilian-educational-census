@@ -1,0 +1,84 @@
+<figure>
+  <blockquote class="blockquote">
+    <p>Diversidade nacional de raça/cor</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Censo de 2021 do ENADE
+  </figcaption>
+</figure>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td></td>
+      <td>Brasil</td>
+      <td>Norte</td>
+      <td>Nordeste</td>
+      <td>Centro-Oeste</td>
+      <td>Suldeste</td>
+      <td>Sul</td>
+    </tr>
+  </thead>
+
+  <tr>
+    <td>Pardas</td>
+    <td id="parda-brazil"><%= number_with_delimiter(@racial_diversity["parda"]) %></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Brancas</td>
+    <td id="branca-brazil"><%= number_with_delimiter(@racial_diversity["branca"]) %></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Pretas</td>
+    <td id="preta-brazil"><%= number_with_delimiter(@racial_diversity["preta"]) %></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Indígenas</td>
+    <td id="indigena-brazil"><%= number_with_delimiter(@racial_diversity["indigena"]) %></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Amarelas</td>
+    <td id="amarela-brazil"><%= number_with_delimiter(@racial_diversity["amarela"]) %></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Não declaradas</td>
+    <td id="nao-declarado-brazil"><%= number_with_delimiter(@racial_diversity["nao_declarado"]) %></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+</table>
