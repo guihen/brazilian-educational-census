@@ -85,6 +85,57 @@ sao_paulo:
       "indigena": 0
     }
 
+sao_paulo_prof_rafael_de_morais_lima:
+  name: RAFAEL DE MORAES LIMA PROF
+  code: 35001181
+  region: Sudeste
+  state: São Paulo
+  county: São Paulo
+  zipcode: 02346140
+  racial_diversity:
+    {
+      "nao_declarado": 249,
+      "branca": 356,
+      "parda": 135,
+      "preta": 8,
+      "amarela": 2,
+      "indigena": 0
+    }
+
+sao_paulo_albino_cesar:
+  name: ALBINO CESAR
+  code: 35001173
+  region: Sudeste
+  state: São Paulo
+  county: São Paulo
+  zipcode: 02308090
+  racial_diversity:
+    {
+      "nao_declarado": 370,
+      "branca": 780,
+      "parda": 268,
+      "preta": 24,
+      "amarela": 10,
+      "indigena": 4
+    }
+
+sao_paulo_philomena_baylao_profa:
+  name: PHILOMENA BAYLAO PROFA
+  code: 35001193
+  region: Sudeste
+  state: São Paulo
+  county: São Paulo
+  zipcode: 02368000
+  racial_diversity:
+    {
+      "nao_declarado": 256,
+      "branca": 525,
+      "parda": 281,
+      "preta": 12,
+      "amarela": 7,
+      "indigena": 1
+    }
+
 bahia:
   name: ESC JESUS MARIA JOSE
   code: 29357071
@@ -101,7 +152,6 @@ bahia:
       "amarela": 0,
       "indigena": 0
     }
-
 
 goias:
   name: COLEGIO MONTEIRO LOBATO
