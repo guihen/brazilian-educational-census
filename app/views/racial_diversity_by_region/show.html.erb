@@ -1,0 +1,97 @@
+<figure>
+  <blockquote class="blockquote">
+    <p>Diversidade regional de raça/cor - <strong>Região <%= @region %></strong></p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Censo de 2021 do ENADE
+  </figcaption>
+</figure>
+
+<div class="row">
+  <div class="col-sm-6">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th></th>
+          <th><%= @region %></th>
+        </tr>
+      </thead>
+
+      <tr>
+        <td>Pardas</td>
+        <td id="parda-regiao-<%= @region.downcase %>"><%= number_with_delimiter(@racial_diversity["parda"]) %></td>
+      </tr>
+
+      <tr>
+        <td>Brancas</td>
+        <td id="branca-regiao-<%= @region.downcase %>"><%= number_with_delimiter(@racial_diversity["branca"]) %></td>
+      </tr>
+
+      <tr>
+        <td>Pretas</td>
+        <td id="preta-regiao-<%= @region.downcase %>"><%= number_with_delimiter(@racial_diversity["preta"]) %></td>
+      </tr>
+
+      <tr>
+        <td>Indígenas</td>
+        <td id="indigena-regiao-<%= @region.downcase %>"><%= number_with_delimiter(@racial_diversity["indigena"]) %></td>
+      </tr>
+
+      <tr>
+        <td>Amarelas</td>
+        <td id="amarela-regiao-<%= @region.downcase %>"><%= number_with_delimiter(@racial_diversity["amarela"]) %></td>
+      </tr>
+
+      <tr>
+        <td>Não declaradas</td>
+        <td id="nao-declarado-regiao-<%= @region.downcase %>"><%= number_with_delimiter(@racial_diversity["nao_declarado"]) %></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<% @setor_groups.each do |setor_group| %>
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table table-striped table-hover table-sm caption-top">
+        <caption><%= "Setor ##{setor_group.setor}" %>
+        <thead>
+          <tr>
+            <th></th>
+            <th><%= setor_group.county %></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>Pardas</td>
+          <td id="parda-setor-<%= setor_group.setor %>"><%= number_with_delimiter(setor_group.racial_diversity["parda"]) %></td>
+        </tr>
+
+        <tr>
+          <td>Brancas</td>
+          <td id="branca-setor-<%= setor_group.setor %>"><%= number_with_delimiter(setor_group.racial_diversity["branca"]) %></td>
+        </tr>
+
+        <tr>
+          <td>Pretas</td>
+          <td id="preta-setor-<%= setor_group.setor %>"><%= number_with_delimiter(setor_group.racial_diversity["preta"]) %></td>
+        </tr>
+
+        <tr>
+          <td>Indígenas</td>
+          <td id="indigena-setor-<%= setor_group.setor %>"><%= number_with_delimiter(setor_group.racial_diversity["indigena"]) %></td>
+        </tr>
+
+        <tr>
+          <td>Amarelas</td>
+          <td id="amarela-setor-<%= setor_group.setor %>"><%= number_with_delimiter(setor_group.racial_diversity["amarela"]) %></td>
+        </tr>
+
+        <tr>
+          <td>Não declaradas</td>
+          <td id="nao-declarado-setor-<%= setor_group.setor %>"><%= number_with_delimiter(setor_group.racial_diversity["nao_declarado"]) %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<% end %>
