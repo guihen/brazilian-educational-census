@@ -75,4 +75,10 @@ class SchoolDtoTest < ActiveSupport::TestCase
 
     assert_equal school_dto.racial_diversity, expected_diversity
   end
+
+  test "should returns the year of the census" do
+    school_dto = SchoolDto.new(SAMPLE_1)
+
+    assert_equal school_dto.census_year, 2021
+  end
 end

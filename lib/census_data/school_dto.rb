@@ -30,6 +30,10 @@ class SchoolDto
     parsed_data[23]
   end
 
+  def census_year
+    parsed_data[0].to_i
+  end
+
   def racial_diversity
     {
       nao_declarado: parsed_data[316].to_i,

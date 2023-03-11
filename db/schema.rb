@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_24_222042) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_11_224148) do
   create_table "schools", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "code", null: false
@@ -21,6 +21,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_24_222042) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.json "racial_diversity"
+    t.integer "census_year"
+    t.index ["census_year"], name: "index_schools_on_census_year"
     t.index ["code"], name: "index_schools_on_code"
   end
 
