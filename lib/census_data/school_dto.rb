@@ -27,7 +27,7 @@ class SchoolDto
   end
 
   def zipcode
-    parsed_data[23]
+    parsed_data[23] || "00000000"
   end
 
   def census_year

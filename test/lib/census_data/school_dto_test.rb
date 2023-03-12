@@ -7,6 +7,8 @@ class SchoolDtoTest < ActiveSupport::TestCase
 
   SAMPLE_2 = "2021;Nordeste;2;Pernambuco;PE;26;São Caitano;2613107;Agreste Pernambucano;2603;Vale do Ipojuca;26008;261310705;26062836;ESCOLA DE REFERENCIA EM ENSINO FUNDAMENTAL E MEDIO JOAQUIM RIBEIRO DA ROCHA;2;;1;0;RUA RODOLFO TORRES;SN;;CABUGA;55130000;81;37361758;1;00009;03FEB2021:00:00:00;21DEC2021:00:00:00;1;0;0;0;;;;;;;;;;;;1;2;;;1;1;;0;0;0;;;0;;0;0;0;;1;1;0;0;0;0;1;;0;;0;0;0;1;0;1;0;1;0;0;0;0;;;;0;0;0;1;0;0;0;;;1;0;1;1;0;;1;1;1;1;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;1;0;1;0;1;1;0;0;;;0;1;0;0;1;1;0;0;0;0;;9;0;9;0;9;0;1;0;1;1;0;0;0;0;0;0;0;0;0;0;1;3;;;;;;;;;;;;;;1;10;0;0;1;26;;;1;1;1;1;0;1;0;2;1;;1;1;1;2;0;0;0;0;0;0;0;0;0;0;0;0;1;4;1;1;1;1;0;0;0;0;1;1;0;0;1;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;;;;0;;;;;;;0;;;;;;;1;0;0;0;0;1;0;1;0;1;0;0;1;0;0;1;1;1;0;1;0;0;0;1;0;1;1;0;0;1;1;0;1;1;0;296;0;0;0;163;0;163;84;0;0;49;49;0;12;12;0;171;125;242;20;2;31;0;1;0;0;3;131;100;62;228;68;0;0;0;0;39;0;39;0;1;1;0;1;1;1;0;0;0;0;0;0;0;1;1;0;11;0;0;0;6;0;6;3;0;0;2;2;0;7;7;0".freeze
 
+  SAMPLE_WITHOUT_ZIPCODE = "2022;Norte;1;Amazonas;AM;13;Anori;1300102;Centro Amazonense;3;Coari;6;130010205;ESC NOVA ESPERANCA;13014960;3;;2;;LIBERDADE I;;;;;.;.;3;0MI36;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+
   test "should initializes receiving a line from the census file" do
     assert_nothing_raised do
       SchoolDto.new(SAMPLE_1)
@@ -47,6 +49,12 @@ class SchoolDtoTest < ActiveSupport::TestCase
     school_dto = SchoolDto.new(SAMPLE_1)
 
     assert_equal school_dto.zipcode, "76954000"
+  end
+
+  test "should returns '00000000' if the school doens't have a zipcode" do 
+    school_dto = SchoolDto.new(SAMPLE_WITHOUT_ZIPCODE)
+
+    assert_equal school_dto.zipcode, "00000000"
   end
 
   test "should receives the line parser as an optional parameter in the initializer" do
