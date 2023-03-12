@@ -3,7 +3,7 @@
     <p>Diversidade nacional de raça/cor</p>
   </blockquote>
   <figcaption class="blockquote-footer">
-    Censo de 2021 do ENADE
+    Censo de 2021 e 2022 do ENADE
   </figcaption>
 </figure>
 
@@ -21,64 +21,11 @@
     </tr>
   </thead>
 
-  <tr>
-    <td>Pardas</td>
-    <td id="parda-brazil"><%= number_with_delimiter(@racial_diversity["Total"]["parda"]) %></td>
-    <td id="parda-regiao-norte"><%= number_with_delimiter(@racial_diversity["Norte"]["parda"]) %></td>
-    <td id="parda-regiao-nordeste"><%= number_with_delimiter(@racial_diversity["Nordeste"]["parda"]) %></td>
-    <td id="parda-regiao-centro-oeste"><%= number_with_delimiter(@racial_diversity["Centro-Oeste"]["parda"]) %></td>
-    <td id="parda-regiao-sudeste"><%= number_with_delimiter(@racial_diversity["Sudeste"]["parda"]) %></td>
-    <td id="parda-regiao-sul"><%= number_with_delimiter(@racial_diversity["Sul"]["parda"]) %></td>
-  </tr>
-
-  <tr>
-    <td>Brancas</td>
-    <td id="branca-brazil"><%= number_with_delimiter(@racial_diversity["Total"]["branca"]) %></td>
-    <td id="branca-regiao-norte"><%= number_with_delimiter(@racial_diversity["Norte"]["branca"]) %></td>
-    <td id="branca-regiao-nordeste"><%= number_with_delimiter(@racial_diversity["Nordeste"]["branca"]) %></td>
-    <td id="branca-regiao-centro-oeste"><%= number_with_delimiter(@racial_diversity["Centro-Oeste"]["branca"]) %></td>
-    <td id="branca-regiao-sudeste"><%= number_with_delimiter(@racial_diversity["Sudeste"]["branca"]) %></td>
-    <td id="branca-regiao-sul"><%= number_with_delimiter(@racial_diversity["Sul"]["branca"]) %></td>
-  </tr>
-
-  <tr>
-    <td>Pretas</td>
-    <td id="preta-brazil"><%= number_with_delimiter(@racial_diversity["Total"]["preta"]) %></td>
-    <td id="preta-regiao-norte"><%= number_with_delimiter(@racial_diversity["Norte"]["preta"]) %></td>
-    <td id="preta-regiao-nordeste"><%= number_with_delimiter(@racial_diversity["Nordeste"]["preta"]) %></td>
-    <td id="preta-regiao-centro-oeste"><%= number_with_delimiter(@racial_diversity["Centro-Oeste"]["preta"]) %></td>
-    <td id="preta-regiao-sudeste"><%= number_with_delimiter(@racial_diversity["Sudeste"]["preta"]) %></td>
-    <td id="preta-regiao-sul"><%= number_with_delimiter(@racial_diversity["Sul"]["preta"]) %></td>
-  </tr>
-
-  <tr>
-    <td>Indígenas</td>
-    <td id="indigena-brazil"><%= number_with_delimiter(@racial_diversity["Total"]["indigena"]) %></td>
-    <td id="indigena-regiao-norte"><%= number_with_delimiter(@racial_diversity["Norte"]["indigena"]) %></td>
-    <td id="indigena-regiao-nordeste"><%= number_with_delimiter(@racial_diversity["Nordeste"]["indigena"]) %></td>
-    <td id="indigena-regiao-centro-oeste"><%= number_with_delimiter(@racial_diversity["Centro-Oeste"]["indigena"]) %></td>
-    <td id="indigena-regiao-sudeste"><%= number_with_delimiter(@racial_diversity["Sudeste"]["indigena"]) %></td>
-    <td id="indigena-regiao-sul"><%= number_with_delimiter(@racial_diversity["Sul"]["indigena"]) %></td>
-  </tr>
-
-  <tr>
-    <td>Amarelas</td>
-    <td id="amarela-brazil"><%= number_with_delimiter(@racial_diversity["Total"]["amarela"]) %></td>
-    <td id="amarela-regiao-norte"><%= number_with_delimiter(@racial_diversity["Norte"]["amarela"]) %></td>
-    <td id="amarela-regiao-nordeste"><%= number_with_delimiter(@racial_diversity["Nordeste"]["amarela"]) %></td>
-    <td id="amarela-regiao-centro-oeste"><%= number_with_delimiter(@racial_diversity["Centro-Oeste"]["amarela"]) %></td>
-    <td id="amarela-regiao-sudeste"><%= number_with_delimiter(@racial_diversity["Sudeste"]["amarela"]) %></td>
-    <td id="amarela-regiao-sul"><%= number_with_delimiter(@racial_diversity["Sul"]["amarela"]) %></td>
-  </tr>
-
-  <tr>
-    <td>Não declaradas</td>
-    <td id="nao-declarado-brazil"><%= number_with_delimiter(@racial_diversity["Total"]["nao_declarado"]) %></td>
-    <td id="nao-declarado-regiao-norte"><%= number_with_delimiter(@racial_diversity["Norte"]["nao_declarado"]) %></td>
-    <td id="nao-declarado-regiao-nordeste"><%= number_with_delimiter(@racial_diversity["Nordeste"]["nao_declarado"]) %></td>
-    <td id="nao-declarado-regiao-centro-oeste"><%= number_with_delimiter(@racial_diversity["Centro-Oeste"]["nao_declarado"]) %></td>
-    <td id="nao-declarado-regiao-sudeste"><%= number_with_delimiter(@racial_diversity["Sudeste"]["nao_declarado"]) %></td>
-    <td id="nao-declarado-regiao-sul"><%= number_with_delimiter(@racial_diversity["Sul"]["nao_declarado"]) %></td>
-  </tr>
+  <%= render partial: 'racial_diversity_table_row', locals: { title: "Pardas", racial_diversity_2021: @racial_diversity_2021, racial_diversity_2022: @racial_diversity_2022, key: "parda" } %>
+  <%= render partial: 'racial_diversity_table_row', locals: { title: "Brancas", racial_diversity_2021: @racial_diversity_2021, racial_diversity_2022: @racial_diversity_2022, key: "branca" } %>
+  <%= render partial: 'racial_diversity_table_row', locals: { title: "Pretas", racial_diversity_2021: @racial_diversity_2021, racial_diversity_2022: @racial_diversity_2022, key: "preta" } %>
+  <%= render partial: 'racial_diversity_table_row', locals: { title: "Indígenas", racial_diversity_2021: @racial_diversity_2021, racial_diversity_2022: @racial_diversity_2022, key: "indigena" } %>
+  <%= render partial: 'racial_diversity_table_row', locals: { title: "Amarelas", racial_diversity_2021: @racial_diversity_2021, racial_diversity_2022: @racial_diversity_2022, key: "amarela" } %>
+  <%= render partial: 'racial_diversity_table_row', locals: { title: "Não declaradas", racial_diversity_2021: @racial_diversity_2021, racial_diversity_2022: @racial_diversity_2022, key: "nao_declarado" } %>
 
 </table>
