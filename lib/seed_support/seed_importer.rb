@@ -1,12 +1,14 @@
 # abstracts the import algorith. It is specially usefull for run automated tests
 class SeedImporter
   def self.call(file)
-    # ignore the header
-    file.readline
+    headers = CSV.parse_line(file.readline, col_sep: ';')
 
     School.transaction do
       file.each do |line|
-        SchoolDto.new(line).tap do |dto|
+        values = CSV.parse_line(line, col_sep: ';')
+        csv_row = CSV::Row.new(headers, values)
+
+        SchoolDto.new(csv_row).tap do |dto|
           School.create({
             census_year: dto.census_year,
             code: dto.code,
