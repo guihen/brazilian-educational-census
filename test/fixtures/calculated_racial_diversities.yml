@@ -1,0 +1,12 @@
+totals_for_2022:
+  description: "Totals for 2022"
+  slug: "totals_2022"
+  value:
+    {
+      "parda": 17106058,
+      "preta": 1592160,
+      "branca": 15126703,
+      "amarela": 158418,
+      "indigena": 354115,
+      "nao_declarado": 13044620
+    }

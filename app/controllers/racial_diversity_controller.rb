@@ -10,7 +10,7 @@ class RacialDiversityController < ApplicationController
     end
 
     @racial_diversity_2022 = Hash.new.tap do |hash|
-      hash["Total"] = sum_racial_diversity(scope_for_2022.pluck(:racial_diversity))
+      hash["Total"] = CalculatedRacialDiversity.last.value
       hash["Norte"] = sum_racial_diversity(scope_for_2022.where(region: "Norte").pluck(:racial_diversity))
       hash["Nordeste"] = sum_racial_diversity(scope_for_2022.where(region: "Nordeste").pluck(:racial_diversity))
       hash["Centro-Oeste"] = sum_racial_diversity(scope_for_2022.where(region: "Centro-Oeste").pluck(:racial_diversity))
