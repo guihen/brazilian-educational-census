@@ -2,7 +2,7 @@ require "test_helper"
 
 class SumRacialDiversityTest < ActiveSupport::TestCase
   test "should return the sum the list of racial diversity" do
-    racial_diversities = schools(:rondonia, :acre, :pernambuco).map(&:racial_diversity)
+    racial_diversities = schools(:rondonia_2021, :acre_2021, :pernambuco_2021).map(&:racial_diversity)
 
     expected_result = {
       "nao_declarado" => 148,

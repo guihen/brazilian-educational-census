@@ -2,7 +2,7 @@ require "test_helper"
 
 class GroupBySetorTest < ActiveSupport::TestCase
   test "should return a list of SetorGroup" do
-    school = schools(:acre)
+    school = schools(:acre_2021)
     subject = GroupBySetor.new([school])
 
     result = subject.call
@@ -18,8 +18,8 @@ class GroupBySetorTest < ActiveSupport::TestCase
   end
 
   test "should return a SetorGroup for each school with different setor" do
-    same_setor = schools(:sao_paulo_albino_cesar, :sao_paulo_philomena_baylao_profa)
-    different_setor = schools(:bahia)
+    same_setor = schools(:sao_paulo_albino_cesar_2021, :sao_paulo_philomena_baylao_profa_2021)
+    different_setor = schools(:bahia_2021)
     input = same_setor + [different_setor]
     subject = GroupBySetor.new(input)
 
@@ -29,8 +29,8 @@ class GroupBySetorTest < ActiveSupport::TestCase
   end
 
   test "should return the racial diversity related to each setor" do
-    same_setor = schools(:sao_paulo_albino_cesar, :sao_paulo_philomena_baylao_profa)
-    different_setor = schools(:bahia)
+    same_setor = schools(:sao_paulo_albino_cesar_2021, :sao_paulo_philomena_baylao_profa_2021)
+    different_setor = schools(:bahia_2021)
     input = same_setor + [different_setor]
     subject = GroupBySetor.new(input)
     expected_racial_diversity_1 = {

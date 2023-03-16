@@ -1,40 +1,5 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  name: MyString
-  code: MyCode
-  region: Sudeste
-  state: MyString
-  county: MyString
-  zipcode: MyString
-  racial_diversity:
-    {
-      "nao_declarado": 1,
-      "branca": 1,
-      "preta": 1,
-      "parda": 1,
-      "amarela": 1,
-      "indigena": 1
-    }
-
-two:
-  name: MyString
-  code: MyCode
-  region: Norte
-  state: MyString
-  county: MyString
-  zipcode: MyString
-  racial_diversity:
-    {
-      "nao_declarado": 2,
-      "branca": 2,
-      "preta": 2,
-      "parda": 2,
-      "amarela": 2,
-      "indigena": 2
-    }
-
-rondonia:
+rondonia_2021:
+  census_year: 2021
   name: EIEEF HAP BITT TUPARI
   code: 11022558
   region: Norte
@@ -51,7 +16,8 @@ rondonia:
       "indigena": 8
     }
 
-acre:
+acre_2021:
+  census_year: 2021
   name: ESC DARCY VARGAS
   code: 12011509
   region: Norte
@@ -68,7 +34,8 @@ acre:
       "indigena": 0
     }
 
-sao_paulo:
+sao_paulo_2021:
+  census_year: 2021
   name: JORGE BERTOLASO STELLA PROF EMEB
   code: 35277253
   region: Sudeste
@@ -85,7 +52,8 @@ sao_paulo:
       "indigena": 0
     }
 
-sao_paulo_prof_rafael_de_morais_lima:
+sao_paulo_prof_rafael_de_morais_lima_2021:
+  census_year: 2021
   name: RAFAEL DE MORAES LIMA PROF
   code: 35001181
   region: Sudeste
@@ -102,7 +70,8 @@ sao_paulo_prof_rafael_de_morais_lima:
       "indigena": 0
     }
 
-sao_paulo_albino_cesar:
+sao_paulo_albino_cesar_2021:
+  census_year: 2021
   name: ALBINO CESAR
   code: 35001173
   region: Sudeste
@@ -119,7 +88,8 @@ sao_paulo_albino_cesar:
       "indigena": 4
     }
 
-sao_paulo_philomena_baylao_profa:
+sao_paulo_philomena_baylao_profa_2021:
+  census_year: 2021
   name: PHILOMENA BAYLAO PROFA
   code: 35001193
   region: Sudeste
@@ -136,7 +106,8 @@ sao_paulo_philomena_baylao_profa:
       "indigena": 1
     }
 
-bahia:
+bahia_2021:
+  census_year: 2021
   name: ESC JESUS MARIA JOSE
   code: 29357071
   region: Nordeste
@@ -153,7 +124,8 @@ bahia:
       "indigena": 0
     }
 
-goias:
+goias_2021:
+  census_year: 2021
   name: COLEGIO MONTEIRO LOBATO
   code: 52086526
   region: Centro-Oeste
@@ -170,7 +142,8 @@ goias:
       "indigena": 0
     }
 
-espirito_santo:
+espirito_santo_2021:
+  census_year: 2021
   name: EEEFM BERNARDINO MONTEIRO
   code: 32052235
   region: Sudeste
@@ -187,7 +160,8 @@ espirito_santo:
       "indigena": 0
     }
 
-pernambuco:
+pernambuco_2021:
+  census_year: 2021
   name: ESCOLA MUNICIPAL JOAO XXIII
   code: 26013886
   region: Nordeste
@@ -204,7 +178,8 @@ pernambuco:
       "indigena": 2
     }
 
-parana:
+parana_2021:
+  census_year: 2021
   name: AFRANIO PEIXOTO E E EF
   code: 41042476
   region: Sul
