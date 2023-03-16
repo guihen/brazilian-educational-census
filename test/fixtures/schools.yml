@@ -195,3 +195,93 @@ parana_2021:
       "amarela": 1,
       "indigena": 0
     }
+
+rio_de_janeiro_2022:
+  census_year: 2022
+  name: "CE NAZIRA SALOMAO"
+  code: "33036594"
+  region: "Sudeste"
+  state: "Rio de Janeiro"
+  county: "Angra dos Reis"
+  zipcode: "23900640"
+  racial_diversity:
+    {
+      "parda": 115,
+      "preta": 26,
+      "branca": 93,
+      "amarela": 1,
+      "indigena": 0,
+      "nao_declarado": 1031
+    }
+
+rio_grande_do_sul_2022:
+  census_year: 2022
+  name: "EMEF FRANCISCO DE PAULA PEREIRA"
+  code: "43019285"
+  region: "Sul"
+  state: "Rio Grande do Sul"
+  county: "Aceguá"
+  zipcode: "96445000"
+  racial_diversity:
+    {
+      "parda": 16,
+      "preta": 5,
+      "branca": 115,
+      "amarela": 0,
+      "indigena": 0,
+      "nao_declarado": 56
+    }
+
+rio_grande_do_norte_2022:
+  census_year: 2022
+  name: "ESCOLA ESTADUAL DOUTOR JOSE GONCALVES DE MEDEIROS"
+  code: "24034410"
+  region: "Nordeste"
+  state: "Rio Grande do Norte"
+  county: "Acari"
+  zipcode: "59370000"
+  racial_diversity:
+    {
+      "parda": 338,
+      "preta": 1,
+      "branca": 87,
+      "amarela": 0,
+      "indigena": 0,
+      "nao_declarado": 73
+    }
+
+mato_grosso_2022:
+  census_year: 2022
+  name: "EMPG CARUMBE"
+  code: "51033801"
+  region: "Centro-Oeste"
+  state: "Mato Grosso"
+  county: "Acorizal"
+  zipcode: "78480000"
+  racial_diversity:
+    {
+      "parda": 0,
+      "preta": 0,
+      "branca": 0,
+      "amarela": 0,
+      "indigena": 0,
+      "nao_declarado": 0
+    }
+
+para_2022:
+  census_year: 2022
+  name: "E M E I IRMA DOROTHY STANG"
+  code: "15618820"
+  region: "Norte"
+  state: "Pará"
+  county: "Xinguara"
+  zipcode: "68556515"
+  racial_diversity:
+    {
+      "parda": 72,
+      "preta": 1,
+      "branca": 24,
+      "amarela": 0,
+      "indigena": 0,
+      "nao_declarado": 245
+    }
