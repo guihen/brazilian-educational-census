@@ -10,3 +10,16 @@ totals_for_2022:
       "indigena": 354115,
       "nao_declarado": 13044620
     }
+
+totals_for_2021:
+  description: "Totals for 2021"
+  slug: "totals_2021"
+  value:
+    {
+      "parda": 16841950,
+      "preta": 1528657,
+      "branca": 14860060,
+      "amarela": 148604,
+      "indigena": 339182,
+      "nao_declarado": 12949948
+    }
