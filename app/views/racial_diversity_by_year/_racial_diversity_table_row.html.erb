@@ -1,0 +1,21 @@
+<tr>
+  <td><%= title %></td>
+  <td id="#{key}-brazil">
+    <%= number_with_delimiter(racial_diversity["Total"][key]) %>
+  </td>
+  <td id="#{key}-regiao-norte">
+    <%= number_with_delimiter(racial_diversity["Norte"][key]) %>
+  </td>
+  <td id="#{key}-regiao-nordeste">
+    <%= number_with_delimiter(racial_diversity["Nordeste"][key]) %>
+  </td>
+  <td id="#{key}-regiao-centro-oeste">
+    <%= number_with_delimiter(racial_diversity["Centro-Oeste"][key]) %>
+  </td>
+  <td id="#{key}-regiao-sudeste">
+    <%= number_with_delimiter(racial_diversity["Sudeste"][key]) %>
+  </td>
+  <td id="#{key}-regiao-sul">
+    <%= number_with_delimiter(racial_diversity["Sul"][key]) %>
+  </td>
+</tr>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :racial_diversity_by_year, only: :show, param: :year
   get 'racial_diversity/index'
   get 'racial_diversity_by_region/:region', to: 'racial_diversity_by_region#show', as: :racial_diversity_by_region
   get 'brazil/show'
